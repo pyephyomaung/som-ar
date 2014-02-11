@@ -1,0 +1,122 @@
+﻿<Window x:Class="PictureSOMWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PictureSOMWindow"
+        xmlns:extToolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"
+        Title="Training SOM" Height="600" Width="800" Closed="Window_Closed"
+        ResizeMode="CanResizeWithGrip" xmlns:am="http://schemas.amcharts.com/charts/wpf/2009/xaml" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <local:ImageConverter x:Key="ImageConverter" />
+
+        <Style TargetType="{x:Type ListBox}">
+            <Setter 
+                Property="ScrollViewer.HorizontalScrollBarVisibility" 
+                Value="Disabled" 
+            />
+        </Style>
+    </Window.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="260" />
+            <ColumnDefinition Width="358*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="280" />
+            <RowDefinition Height="230*" />
+            <RowDefinition Height="23*" />
+        </Grid.RowDefinitions>
+        <StackPanel Height="277" HorizontalAlignment="Left" Name="stackPanel1" VerticalAlignment="Top" Width="159" Margin="0,3,0,0" Grid.Row="1">
+            <GroupBox Header="Initialiazion" Name="groupBox1" Width="160">
+                <Grid>
+                    <RadioButton Content="Random" Height="16" HorizontalAlignment="Left" Name="radioButton_Random" VerticalAlignment="Top" GroupName="Initialization" IsChecked="True" />
+                    <RadioButton Content="Gradient" Height="16" HorizontalAlignment="Left" Margin="0,22,0,0" Name="radioButton_Gradient" VerticalAlignment="Top" GroupName="Initialization" />
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Learning Rate" Name="groupBox2" Width="160">
+                <Grid Height="56">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*" />
+                        <ColumnDefinition Width="83*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="29*" />
+                        <RowDefinition Height="33*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Phase 1" Height="28" HorizontalAlignment="Left" Name="label_LearningRateP1" VerticalAlignment="Top" Width="66" Margin="0,-2,0,0" Grid.ColumnSpan="2" />
+                    <extToolkit:DecimalUpDown Name="decimalUpDown_LearningRateP1" Margin="7,0,15,0" Height="24" VerticalAlignment="Top" Maximum="0.9" Minimum="0" Increment="0.05" Text="0.7" Grid.Column="1" Value="0.9" />
+                    <Label Content="Phase 2" Height="28" Name="label_LearningRateP2" Width="66" Margin="0,0,82,5" Grid.Row="1" Grid.ColumnSpan="2" />
+                    <extToolkit:DecimalUpDown Name="decimalUpDown_LearningRateP2" Height="24" Maximum="0.9" Minimum="0" Increment="0.05" Text="0.1" Margin="7,2,15,4" Grid.Row="1" Grid.Column="1" />
+                    <!--TextBox Height="23" HorizontalAlignment="Left" Margin="111,3,0,0" Name="textBox_LearningRateP1" VerticalAlignment="Top" Width="31" Text="{Binding ElementName=slider_LearningRateP1, Path=Value}" AcceptsReturn="True" IsReadOnly="True" />
+                    <TextBox AcceptsReturn="True" Height="23" HorizontalAlignment="Left" Margin="111,23,0,0" Name="textBox_LearningRateP2" Text="{Binding ElementName=slider_LearningRateP2, Path=Value}" VerticalAlignment="Top" Width="25" IsReadOnly="True" /-->
+                    <!--Slider HorizontalAlignment="Left" Margin="50,3,0,0" Name="slider_LearningRateP1" Width="50" Value="0.7" Minimum="0.1" Maximum="0.9" Height="23" VerticalAlignment="Top" />
+                    <Slider HorizontalAlignment="Left" Margin="50,0,0,3" Maximum="0.9" Minimum="0" Name="slider_LearningRateP2" Value="0.2" VerticalAlignment="Bottom" Width="50" /-->
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Iteration" Name="groupBox3" Width="160">
+                <Grid Height="55">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*" />
+                        <RowDefinition Height="30*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Phase 1" Height="28" HorizontalAlignment="Left" Margin="0,-2,0,0" Name="label1" VerticalAlignment="Top" Width="66" Grid.RowSpan="2" />
+                    <extToolkit:IntegerUpDown Name="integerUpDown_IterationP1" Margin="72,0,15,0" Height="24" VerticalAlignment="Top" Minimum="0" Increment="20" Text="500" Value="200" />
+                    <Label Content="Phase 2" Height="28" HorizontalAlignment="Left" Margin="0,2,0,0" Name="label2" VerticalAlignment="Top" Width="66" Grid.Row="1" />
+                    <extToolkit:IntegerUpDown Name="integerUpDown_IterationP2" Margin="72,3,15,0" Height="24" VerticalAlignment="Top" Minimum="0" Increment="20" Text="1000" Grid.Row="1" Value="500" />
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
+            <Label Content="Image Source" Height="28" Name="label5" Margin="3,-1,0,1" HorizontalAlignment="Left" Width="82" />
+            <extToolkit:WatermarkTextBox Height="22" Name="textBox_ImageDirectory" Width="354" Grid.ColumnSpan="2" Watermark="Image Source Directory" />
+            <Button Content="Browse" Height="23" Name="button_Browse" Click="button_Browse_Click" Grid.Column="1" Margin="0,2,5,3" Width="75" Grid.ColumnSpan="2" />
+            <Button Content="Reset" Height="23" Name="button_ResetSOM" Width="75" Click="button_ResetSOM_Click" Margin="0,0,5,0" />
+            <Button Content="Train" Height="23" Name="button_TrainSOM" Width="75" Click="button_TrainSOM_Click" Margin="0,0,5,0" />
+            <Button Content="Close" Height="23" Name="CloseButton" Width="75" Click="CloseButton_Click" />
+        </StackPanel>
+        <StatusBar Grid.Row="3" Height="23" Name="statusBar" VerticalAlignment="Top" Grid.ColumnSpan="3">
+            <TextBlock Name="textBlock_numTrainingExamples" Width="200"/>
+            <Separator/>
+            <TextBlock Name="textBlock_NetState"/>
+            <Separator/>
+            <TextBlock Name="textBlock_TotalError" />
+        </StatusBar>
+        
+        <ListBox Name="listBox_ImageList" Grid.Row="1" SelectionChanged="listBox_ImageList_SelectionChanged" Margin="0,3,0,0" Grid.Column="2">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding Converter={StaticResource ImageConverter}}" Width="100"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <am:ColumnChart Grid.Row="2" Grid.ColumnSpan="3" Angle="45" Depth="3">
+            <am:ColumnChart.Graphs>
+                <am:ColumnChartGraph Title="Neuron Histogram" x:Name="NeuronHistogram" Height="26" Width="547" Brush="Blue" Background="Black" BalloonBackground="Black" />
+                <am:ColumnChartGraph Title="Feature Histogram" x:Name="FeatureHistogram" Height="26" Width="547" Brush="Red" Background="Black" BalloonBackground="Black" />
+            </am:ColumnChart.Graphs>
+        </am:ColumnChart>
+        <TabControl Name="tabControl1" Grid.Column="1" Grid.Row="1" Height="280" VerticalAlignment="Top" HorizontalAlignment="Left" Width="260">
+            <TabItem Header="Competition Layer">
+                <Grid>
+                    <Canvas Name="canvas_CompetitionLayer" MouseDown="canvas_CompetitionLayer_MouseDown" HorizontalAlignment="Left" Width="250" Height="250" VerticalAlignment="Top" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Error Map">
+                <Grid>
+                    <Canvas Name="canvas_ErrorMap"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

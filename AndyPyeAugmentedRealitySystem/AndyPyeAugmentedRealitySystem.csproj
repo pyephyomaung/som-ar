@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61AA71F0-8FC0-4305-8764-79E38C511DAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AndyPyeAugmentedRealitySystem</RootNamespace>
+    <AssemblyName>AndyPyeAugmentedRealitySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>&lt;Project Location In Database&gt;</SccProjectName>
+    <SccLocalPath>&lt;Local Binding Root of Project&gt;</SccLocalPath>
+    <SccAuxPath>&lt;Source Control Database&gt;</SccAuxPath>
+    <SccProvider>Mercurial Source Control Package</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenCvSharp, Version=2.0.4376.27353, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Petzold.Media3D">
+      <HintPath>References\Petzold.Media3D.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConsoleManager.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Models\cube_red_rotate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\cube_video.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\hypersphere.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\Miku_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\Planevideo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Models\star.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelCode\CubeTransparent.cs" />
+    <Compile Include="ModelCode\CubeVideo.cs" />
+    <Compile Include="ModelCode\IModelCode.cs" />
+    <Compile Include="ModelCode\NullModel.cs" />
+    <Compile Include="ModelCode\ParticleModel.cs" />
+    <Compile Include="ModelCode\PyramidGrow.cs" />
+    <Compile Include="ModelCode\StarAnimated.cs" />
+    <Compile Include="ModelCode\SurfaceVideo.cs" />
+    <Compile Include="OpenCVSharpCam.cs" />
+    <Compile Include="OpenCVSharpHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\cvextern.dll" />
+    <Content Include="bin\Debug\opencv_calib3d231.dll" />
+    <Content Include="bin\Debug\opencv_contrib231.dll" />
+    <Content Include="bin\Debug\opencv_core231.dll" />
+    <Content Include="bin\Debug\opencv_features2d231.dll" />
+    <Content Include="bin\Debug\opencv_ffmpeg.dll" />
+    <Content Include="bin\Debug\opencv_ffmpeg_64.dll" />
+    <Content Include="bin\Debug\opencv_flann231.dll" />
+    <Content Include="bin\Debug\opencv_gpu231.dll" />
+    <Content Include="bin\Debug\opencv_highgui231.dll" />
+    <Content Include="bin\Debug\opencv_imgproc231.dll" />
+    <Content Include="bin\Debug\opencv_legacy231.dll" />
+    <Content Include="bin\Debug\opencv_ml231.dll" />
+    <Content Include="bin\Debug\opencv_objdetect231.dll" />
+    <Content Include="bin\Debug\opencv_ts230.dll" />
+    <Content Include="bin\Debug\opencv_video231.dll" />
+    <Content Include="bin\Release\cvextern.dll" />
+    <Content Include="bin\Release\opencv_calib3d231.dll" />
+    <Content Include="bin\Release\opencv_contrib231.dll" />
+    <Content Include="bin\Release\opencv_core231.dll" />
+    <Content Include="bin\Release\opencv_features2d231.dll" />
+    <Content Include="bin\Release\opencv_ffmpeg.dll" />
+    <Content Include="bin\Release\opencv_ffmpeg_64.dll" />
+    <Content Include="bin\Release\opencv_flann231.dll" />
+    <Content Include="bin\Release\opencv_gpu231.dll" />
+    <Content Include="bin\Release\opencv_highgui231.dll" />
+    <Content Include="bin\Release\opencv_imgproc231.dll" />
+    <Content Include="bin\Release\opencv_legacy231.dll" />
+    <Content Include="bin\Release\opencv_ml231.dll" />
+    <Content Include="bin\Release\opencv_objdetect231.dll" />
+    <Content Include="bin\Release\opencv_ts230.dll" />
+    <Content Include="bin\Release\opencv_video231.dll" />
+    <Content Include="References\OpenCvSharp.dll" />
+    <Content Include="References\Petzold.Media3D.dll" />
+    <Resource Include="models.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PictureSOMWindow\PictureSOMWindow.csproj">
+      <Project>{3FF43A33-E2E2-4DC9-87B8-DEE5C0B96649}</Project>
+      <Name>PictureSOMWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PictureSOM\PictureSOM.csproj">
+      <Project>{524C007F-6D2A-46D2-BBAF-E443203E3574}</Project>
+      <Name>PictureSOM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThinkGearNET\ThinkGearNET.csproj">
+      <Project>{C68936BB-3413-4350-972B-FD3160AD92ED}</Project>
+      <Name>ThinkGearNET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

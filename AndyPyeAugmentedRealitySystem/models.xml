@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Models>
+  <!--Model id="495" trans="false" rotX="90" rotY="0" rotZ="90" sizeX="25" sizeY="100" sizeZ="40" offX="0" offY="0" offZ="0" path=".\xaml\masterchief.xaml" code="wpfArVideo.NullModel"/-->
+  <!--Model id="496" trans="true" rotX="90" rotY="0" rotZ="90" sizeX="20" sizeY="15" sizeZ="20" offX="50" offY="0" offZ="0" path="..\..\Models\hemisphere.xaml" code="wpfArVideo.NullModel"/-->
+  <!--Model id="497" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="500" sizeY="500" sizeZ="0" offX="0" offY="0" offZ="0" path=".\xaml\plane_tiled.xaml" code="wpfArVideo.NullModel"/-->
+  <!--Model id="498" trans="true" rotX="0" rotY="0" rotZ="0" sizeX="50" sizeY="50" sizeZ="50" offX="0" offY="0" offZ="0" path=".\xaml\box1_transparent.xaml" code="wpfArVideo.CubeTransparent"/-->
+  <!--Model id="480" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="50" sizeY="10" sizeZ="50" offX="0" offY="0" offZ="0" path=".\xaml\star8_animated.xaml" code="wpfArVideo.StarAnimated"/-->
+  <!--Model id="485" trans="false" rotX="90" rotY="0" rotZ="0" sizeX="10" sizeY="10" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\pyramid_grow.xaml" code="wpfArVideo.PyramidGrow"/-->
+  <!--Model id="490" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="50" sizeY="50" sizeZ="50" offX="0" offY="0" offZ="0" path=".\xaml\cube_color.xaml" code="wpfArVideo.NullModel"/-->
+  <Model id="001" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="30" sizeY="30" sizeZ="5" offX="0" offY="0" offZ="0" path="..\..\Models\Miku_1.xaml" code=""/>
+  <Model id="002" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="10" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\cube_red_rotate.xaml" code="AndyPyeAugmentedRealitySystem.ParticleModel"/>
+  <Model id="003" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="10" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\hypersphere.xaml" code="AndyPyeAugmentedRealitySystem.PyramidGrow"/>
+  <Model id="004" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="10" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\star.xaml" code=""/>
+  <Model id="005" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="30" sizeY="20" sizeZ="5" offX="0" offY="0" offZ="0" path="..\..\Models\cube_video.xaml" code="AndyPyeAugmentedRealitySystem.CubeVideo"/>
+  <!--Model id="005" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="10" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\Planevideo.xaml" code="AndyPyeAugmentedRealitySystem.SurfaceVideo"/-->
+  <!--Model id="482" trans="false" rotX="90" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\circle.xaml" code=""/>
+  <Model id="483" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\circle2.xaml" code=""/>
+  <Model id="484" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\cross.xaml" code=""/>
+  <Model id="485" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\flat_box.xaml" code=""/>
+  <Model id="486" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\flat_box1.xaml" code=""/>
+  <Model id="487" trans="false" rotX="0" rotY="180" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\hand.xaml" code=""/>
+  <Model id="488" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\moon.xaml" code=""/>
+  <Model id="489" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\no.xaml" code=""/>
+  <Model id="490" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\plane50.xaml" code=""/>
+  <Model id="491" trans="false" rotX="90" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\plus.xaml" code=""/>
+  <Model id="492" trans="false" rotX="90" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\pyramid.xaml" code=""/-->
+  <!--Model id="493" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\sphere32.xaml" code=""/-->
+  <!--Model id="494" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\star.xaml" code=""/-->
+  <!--Model id="495" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\star5.xaml" code=""/-->
+  <!--Model id="496" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\star6.xaml" code=""/>
+  <Model id="497" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\star8.xaml" code=""/>
+  <Model id="498" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="10" sizeY="5" sizeZ="10" offX="0" offY="0" offZ="0" path="..\..\Models\x.xaml" code=""/-->
+  <!--Model id="499" trans="false" rotX="0" rotY="180" rotZ="0" sizeX="50" sizeY="15" sizeZ="50" offX="0" offY="0" offZ="0" path="..\..\Models\yes.xaml" code=""/-->
+  <!--Model id="003" trans="false" rotX="0" rotY="0" rotZ="0" sizeX="50" sizeY="50" sizeZ="50" offX="0" offY="0" offZ="0" path="..\..\Models\particle.xaml" code="AndyPyeAugmentedRealitySystem.ParticleModel"/-->
+</Models>
