@@ -29,4 +29,4 @@ is rendered on the screen using WPF 3D.</p>
 </div>
 
 Paper, Source code and prezi slides can be found here:<br/>
-http://pyephyo.wordpress.com/2012/04/04/augmented-reality-using-a-neural-network/
+https://pye.gg/posts/2012-04-04-Augmented-Reality-Using-a-Neural-Network.html
